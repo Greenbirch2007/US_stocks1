@@ -1,0 +1,42 @@
+
+
+
+
+1.每日交易数据跟踪
+
+
+0,10,20,30,40,50  21-23  * * 1-5 /usr/bin/python3 /root/following_sp500_plus_nas100_20220412.py
+0,10,20,30,40,50  0-4  * * 2-6 /usr/bin/python3 /root/following_sp500_plus_nas100_20220412.py
+
+
+2. 每月自动执行财务数据库更新  更新完之后就一次性导出
+
+
+
+merge_industry_netprofit.py   
+
+
+
+3. 导出top30数据，省去手动更新
+
+
+15,18,24,30,36,42,48,54,59  21-23  * * 1-5 /usr/bin/python3 /root/merage_ontime_industry_netprofit.py
+
+15,18,24,30,36,42,48,54,59   0-4  * * 2-6 /usr/bin/python3 /root/merage_ontime_industry_netprofit.py
+
+
+
+更新文件
+1 sp500_plus_nas100_netprofits_from_sina ok 插入无所谓
+2 following_sp500_plus_nas100_20220412  ok
+3 google_finance_SpPlusNas_indutry_infos  ok
+4 merage_ontime_industry_netprofit  ok 但是如果为空会报错
+
+5. merge_industry_netprofit ok
+
+6. bash file ok
+
+
+
+
+
